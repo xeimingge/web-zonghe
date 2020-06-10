@@ -1,0 +1,48 @@
+.nav {
+    cursor: pointer;
+}
+
+.nav li {
+    width: 140px;
+    height: 50px;
+    background: #ccc;
+    /*水平垂直居中*/
+    text-align: center;
+    line-height: 50px;
+}
+
+/*选中二级菜单 隐藏*/
+.nav>ul ul {
+    display: none;
+    position: absolute;
+    left: 20px;
+}
+
+/*二级菜单上10px高度空白*/
+/*鼠标可以悬浮的区域不包含margin*/
+.nav>ul ul {
+    padding-top: 10px;
+    /*padding-left: 20px;*/
+}
+
+/*一级列表项水平摆放*/
+.nav>ul>li {
+    float: left;
+    position: relative;
+}
+
+/*鼠标悬浮到一级列表项时 二级菜单出现*/
+/*.nav>ul>li:hover>ul {}*/
+.nav>ul>li:hover ul {
+    display: block;
+}
+
+/*鼠标放到列表项的时候 背景黄色 字体白色*/
+.nav li:hover {
+    background-color: yellow;
+}
+
+/*.nav li:hover>a {}*/
+.nav li:hover>a {
+    color: white;
+}
